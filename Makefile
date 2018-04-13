@@ -3,7 +3,10 @@
 
 #BKSLFIX = y
 
+ifndef KVER
 KVER := $(shell uname -r)
+endif
+
 KSRC := /lib/modules/$(KVER)/build
 MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/input/keyboard
 MODULE_NAME := warriorkbd
